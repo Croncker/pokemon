@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    font-family: sans-serif;
+    background: #39aea9;
+    padding: 4rem;
+}
+
+.cards{
+    height: 85vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    gap: 2rem;
+}
+
+.card{
+    list-style: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    box-shadow: 0 2rem 0rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.card--first{
+    grid-column: 1 / 5;
+    grid-row: 1 / 7;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card--first > input{
+    width: 70%;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    padding-left: 2rem;
+}
+
+.card--second{
+    grid-column: 5 / 10;
+    grid-row: 1 / 7;
+    padding: 4rem;
+    font-size: 1.5rem;
+}
+
+.card--third{
+    grid-row: 7 / 17;
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.card--third > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card--third > button{
+    width: 15rem;
+    height: 6rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    border: none;
+    background: #ee1515;
+    color: #eee;
+    border-radius: 0.5rem;
+}
+
+.card--four{
+    grid-row: 7 / 17;
+    grid-column: 5 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.card--five{
+    grid-row: 7 / 17;
+    grid-column: 9 / 14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.tvShowTekst {
+    overflow: scroll;
+    height: 100%;
+}
+
+.card--six{
+    grid-row: 7 / 1;
+    grid-column: 10 / 14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+@media screen and (max-width: 145rem) {
+    .card--second{
+        grid-row:  1 / 7;
+        font-size: 70%;
+    }
+    .card--third{
+        grid-column: 1 / 5;
+    }
+    .card--four{
+        grid-column: 5 / 9;
+    }
+    .body{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 87.5rem) {
+    .card--second{
+        grid-row:  1 / 7;
+        font-size: 59%;
+    }
+    .card--third{
+        grid-column: 1 / 5;
+    }
+    .card--four{
+        grid-column: 5 / 9;
+    }
+    .body{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 62.5rem){
+    .card--first{
+        display: none;
+    }
+    .card--second{
+        display: none;
+    }
+    .card--third{
+        grid-column: 1 / 13;
+        grid-row:  1 / 14;
+    }
+    .card--four{
+        display: none;
+    }
+    .card--five{
+        display: none;
+    }
+    .card--six{
+        display: none;
+    }
+    .body{
+        font-size: 1rem;
+    }
+}
